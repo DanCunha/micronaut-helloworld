@@ -1,5 +1,5 @@
 # micronaut-helloworld
-Java Project with Micronaut framework nd Maven
+Java Project with Micronaut framework and Maven
 
 # Micronaut Commands
 * mn create-app test --build maven
@@ -18,7 +18,7 @@ Java Project with Micronaut framework nd Maven
 
 
 
-#Fonts
+# Fonts
 * https://docs.micronaut.io/latest/guide/index.html#installWindows
 * https://github.com/micronaut-projects/micronaut-core/issues/630
 * https://stackoverflow.com/questions/13606794/maven-build-failure-when-calling-mvn-without-lifecycle-phase-or-goal/13606824
