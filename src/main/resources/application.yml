@@ -3,3 +3,19 @@ micronaut:
     name: micronaut-hello-world
   server:
     port: 8086
+  router:
+    static-resources:
+        swagger:
+            paths: classpath:META-INF/swagger
+            mapping: ${application.api.swagger.path}/**
+
+application:
+    api:
+      swagger:
+        path: /api-docs/swagger
+        version: 3.19.4
+        layout: StandaloneLayout
+        deepLinking: true
+        urls:
+          name: micronaut-hello-world
+          url: /api-docs/swagger/ubw-rest-0.1.yml
