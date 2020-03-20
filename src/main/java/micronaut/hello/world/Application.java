@@ -7,7 +7,7 @@ import io.swagger.v3.oas.annotations.info.License;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "swagger-server",
+                title = "micronaut-hello-world",
                 version = "0.1",
                 description = "My API",
                 license = @License(name = "Apache 2.0")
