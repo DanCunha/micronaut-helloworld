@@ -2,7 +2,7 @@
 Java Project with Micronaut framework and Maven
 
 # Micronaut Commands
-* mn create-app test --build maven
+* mn create-app test --build maven --features swagger-java
 * mvnw compile
 * mvnw exec:exec
 
