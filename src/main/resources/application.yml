@@ -1,5 +1,39 @@
+application:
+    api:
+      swagger:
+        path: /api-docs/swagger
+        version: 3.19.4
+        layout: StandaloneLayout
+        deepLinking: true
+        urls:
+        - name: micronaut-hello-world
+          url: /api-docs/swagger/micronaut-hello-world-0.1.yml
+
 micronaut:
-  application:
-    name: micronaut-hello-world
-  server:
-    port: 8086
+    server:
+        port: 8086
+    application:
+        name: micronaut-hello-world
+        instance: ${random.uuid}
+        version: 0.1
+#    server:
+#        port: 9090
+    router:
+        static-resources:
+            swagger:
+                paths: classpath:META-INF/swagger
+                mapping: ${application.api.swagger.path}/**
+
+    metrics:
+        enabled: true
+        export:
+            prometheus:
+                enabled: true
+
+endpoints:
+    health:
+        enabled: true
+        sensitive: false
+        details-visible: ANONYMOUS
+        url:
+            enabled: true
